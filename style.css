@@ -1,0 +1,292 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Helvetica", sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    /* HEADER ORIZZONTALE */
+    .topbar {
+    display: flex;
+    align-items: center;
+    padding: 0rem 2rem;
+    border-bottom: 2px solid #000; /* linea orizzontale sotto header */
+    }
+
+    /* BLOCCO TITOLO */
+    .title-block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+    }
+
+    .title-block h1 {
+    margin: 0;
+    font-size: 2rem;
+    }
+
+    .title-block .subtitle {
+    margin: 0;
+    font-size: 1.5rem;
+    /*font-weight: normal;*/
+    color: #333;
+    }
+
+    /* LINEA DIVISORIA VERTICALE */
+    .divider {
+    width: 2px;
+    background: #000;
+    align-self: stretch;
+    margin: 0 2rem;
+    }
+
+    /* MENU */
+    .menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    }
+
+    .menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: color 0.2s;
+    }
+
+    .menu ul li a:hover {
+    color: #fff;
+    }
+
+    /* Link attivo */
+    .menu ul li a.active {
+    color: #333;
+    text-decoration: underline;
+    }
+
+    /* CONTENUTO */
+    .content {
+    padding: 2rem;
+    }
+
+    .content h2 {
+    margin-bottom: 0.5rem;
+    }
+
+    .content p {
+    max-width: 700px;
+    margin-bottom: 1rem;
+    }
+
+    /* Linea orizzontale di separazione sezioni */
+    hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 2rem 0;
+    }
+
+
+
+
+
+    /* HEADER */
+    /* header {
+      position: fixed;   /* <-- questo lo rende "incollato" in alto 
+      top: 0;            /* attaccato al bordo superiore 
+      left: 0;           /* attaccato al bordo sinistro 
+      width: 100%;       /* occupa tutta la larghezza   
+      padding: 1rem 2rem;
+      background: #fff;
+      z-index: 1000;     /* resta sopra gli altri elementi 
+    } */
+
+    /*header h1 {
+      font-size: 1.5rem;
+    }*/
+
+    main {
+      margin-top: 80px;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #000;
+      position: relative;
+    }
+
+    section h2 {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    section p {
+      margin-bottom: 1rem;
+      max-width: 700px;
+    }
+
+    /* MENU */
+    .sidebar {
+        width: 220px;
+        padding: 2rem 1rem;
+        border-right: 1px solid #333; /* linea verticale separatrice */
+    }
+
+    .sidebar h1 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #333; /* linea sotto il titolo */
+    padding-bottom: 0.5rem;
+    }
+
+    .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .sidebar ul li {
+    margin-bottom: 1rem;
+    }
+
+    .sidebar ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: bold;
+    transition: color 0.2s;
+    }
+
+    .sidebar ul li a:hover {
+    color: #fff;
+    }
+
+    /* Voce attiva */
+    .sidebar ul li a.active {
+    color: #fff;
+    text-decoration: underline;
+    }
+
+    /* HORIZONTAL SCROLL CONTAINER */
+    .horizontal-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+    }
+
+    .horizontal-scroll::-webkit-scrollbar {
+      height: 8px;
+    }
+    .horizontal-scroll::-webkit-scrollbar-thumb {
+      background: #555;
+      border-radius: 4px;
+    }
+
+    /* IMMAGINI */
+    .item {
+      flex: 0 0 auto;
+      width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      scroll-snap-align: start;
+      position: relative;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* FRECCE  che non funzionano ehehehhe*/
+    .arrow {
+      width: 40px;
+      height: 2px;
+      background: #333;       
+      position: relative;
+    }
+
+    .arrow.left {
+      content: "";
+  position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(-135deg);
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #333;
+    border-right: 2px solid #333;
+        }
+
+    .arrow.right {
+      content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid #333;
+        border-right: 2px solid #333;
+    }
+
+
+    /* about */
+    .about {
+      display: flex;
+      align-items: top;   /* centra verticalmente immagine e testo */
+      gap: 40px;             /* spazio tra immagine e testo */
+      margin: 30px 60px;
+      max-width: 1000px;     /* larghezza massima contenitore */
+    }
+
+    .about img {
+      width: 400px; 
+      height: 600px;
+      border-radius: 0px;   /* angoli arrotondati (opzionale) */
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.6;
+      font-family: Helvetica, sans-serif;
+    }
+
+
+    /* footer */
+
+    .site-footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #fff;
+      font-family: Helvetica, sans-serif;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+
+    .footer-menu {
+      margin-top: 10px;
+    }
+
+    .footer-menu a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    .footer-menu a:hover {
+      text-decoration: underline;
+    }

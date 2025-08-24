@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nicole Tecchio Illustrator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="item">
+      <img src="gif/Animazione1.gif" alt="Immagina una matita simpatica">
+    </div>
+    <div class="title-block">
+      <h1>Nicole Tecchio ._</h1>
+      <h2 class="subtitle">Illustrator</h2>
+    </div>
+    <div class="divider"></div>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html" class="active">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="published.html">Published_Prizes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- sezione 0 -->
+     <section>
+      <h1>._ Welcome to my portfolio</h1>
+     </section>
+
+    <!-- SEZIONE 1 -->
+    <section>
+      <h2>Digital Artworks</h2>
+
+      <button class="arrow left" onclick="scrollSection(this, -1)">&#10094;</button>
+      <button class="arrow right" onclick="scrollSection(this, 1)">&#10095;</button>
+
+      <div class="horizontal-scroll">
+        <div class="item"><img src="pics/Tumulto3.png" alt="Tumulto Pride 2025"></div>
+        <div class="item"><img src="pics/se-leggi-ti-liberi-2.png" alt="Se leggi ti liberi"></div>
+        <div class="item"><img src="pics/polpo.jpg" alt="polpo"></div>
+        <div class="item"><img src="pics/nico-lokzine.jpg" alt="Lokzine"></div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 2 -->
+    <section>
+      <h2>Analog Artworks</h2>
+
+      <button class="arrow left" onclick="scrollSection(this, -1)">&#10094;</button>
+      <button class="arrow right" onclick="scrollSection(this, 1)">&#10095;</button>
+
+      <div class="horizontal-scroll">
+        <div class="item"><img src="pics/collagenonna.jpeg" alt="Collage"></div>
+        <div class="item"><img src="pics/collagenonna2.jpeg" alt="Collage 2"></div>
+        <div class="item"><img src="pics/collage-pub.jpeg" alt="Collage pubblicato"></div>
+        <div class="item"><img src="pics/cappuccettolegno.jpeg" alt="Tronco con cappuccetto"></div>
+        <div class="item"><img src="pics/Con questo fiore.jpeg" alt="Mantovaner 25aprile25"></div>
+      </div>
+    </section>
+
+    <!-- SEZIONE 3 -->
+    <section>
+      <h2>Photography</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus urna sed laoreet finibus. Integer dictum, erat non eleifend lacinia, odio lectus tincidunt erat, eget vulputate risus libero eget ex.</p>
+
+      <button class="arrow left" onclick="scrollSection(this, -1)">&#10094;</button>
+      <button class="arrow right" onclick="scrollSection(this, 1)">&#10095;</button>
+
+      <div class="horizontal-scroll">
+        <div class="item"><img src="https://picsum.photos/400/300?random=9" alt="Foto 1"></div>
+        <div class="item"><img src="https://picsum.photos/400/300?random=10" alt="Foto 2"></div>
+        <div class="item"><img src="https://picsum.photos/400/300?random=11" alt="Foto 3"></div>
+        <div class="item"><img src="https://picsum.photos/400/300?random=12" alt="Foto 4"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+<div id="footer-placeholder"></div>
+<script src="footer.js"></script>
+
+</html>
