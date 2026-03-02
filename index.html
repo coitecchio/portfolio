@@ -64,15 +64,21 @@
     </section>
 
     <!-- SEZIONE 3 -->
-    <section>
-        <h2>Galleria Orizzontale</h2>
-        <div class="horizontal-scroll-wrapper">
-          <div class="card"><img src="pics/Tumulto3.png" alt="Tumulto Pride 2025"></div>
-          <div class="card"><img src="pics/se-leggi-ti-liberi-2.png" alt="Se leggi ti liberi"></div>
-          <div class="card"><img src="pics/polpo.jpg" alt="polpo"></div>
-          <div class="card"><img src="pics/nico-lokzine.jpg" alt="Lokzine"></div>
-        </div>
-    </section>
+    <div class="carousel-container">
+    <button class="nav-btn prev" onclick="scrollL()">&#10094;</button>
+    
+    <div class="scroll-section" id="slider">
+        <div class="card" style="border-top: 5px solid red;">Card 1</div>
+        <div class="card" style="border-top: 5px solid blue;">Card 2</div>
+        <div class="card" style="border-top: 5px solid green;">Card 3</div>
+        <div class="card" style="border-top: 5px solid orange;">Card 4</div>
+        <div class="card" style="border-top: 5px solid purple;">Card 5</div>
+        <div class="card" style="border-top: 5px solid yellow;">Card 6</div>
+    </div>
+
+      <button class="nav-btn next" onclick="scrollR()">&#10095;</button>
+    </div>
+    
     <section>
       <h2>Photography</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus maximus urna sed laoreet finibus. Integer dictum, erat non eleifend lacinia, odio lectus tincidunt erat, eget vulputate risus libero eget ex.</p>
@@ -93,10 +99,24 @@
 
 </body>
 
-<div id="footer-placeholder"></div>
-<script src="footer.js"></script>
+  <script>
+    const slider = document.getElementById('slider');
+
+    function scrollR() {
+        // Scorre a destra di 300px
+        slider.scrollBy({ left: 300, behavior: 'smooth' });
+    }
+
+    function scrollL() {
+        // Scorre a sinistra di 300px
+        slider.scrollBy({ left: -300, behavior: 'smooth' });
+    }
+</script>
+<!--<div id="footer-placeholder"></div>
+<script src="footer.js"></script>-->
 
 </html>
+
 
 
 
