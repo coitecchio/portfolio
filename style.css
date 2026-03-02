@@ -173,6 +173,7 @@
     text-decoration: underline;
     }
 
+
     /* HORIZONTAL SCROLL CONTAINER */
     .horizontal-scroll {
       display: flex;
@@ -190,6 +191,43 @@
       background: #555;
       border-radius: 4px;
     }
+
+/* --- LA SEZIONE ORIZZONTALE --- */
+        .horizontal-scroll-wrapper {
+            display: flex;            /* Allinea gli elementi in riga */
+            overflow-x: auto;         /* Attiva lo scroll orizzontale */
+            gap: 20px;                /* Spazio tra le card */
+            padding: 20px 0;
+            scroll-snap-type: x mandatory; /* Rende lo scroll "calamitato" */
+            scrollbar-width: thin;    /* Per Firefox: barra sottile */
+        }
+
+        /* Personalizzazione barra di scorrimento (Chrome/Safari/Edge) */
+        .horizontal-scroll-wrapper::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-scroll-wrapper::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 10px;
+        }
+
+        .card {
+            flex: 0 0 300px;          /* Non restringe e fissa la larghezza a 300px */
+            height: 200px;
+            background-color: #3498db;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            scroll-snap-align: start; /* Punto di aggancio per lo scorrimento */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .card:nth-child(even) {
+            background-color: #2ecc71;
+        }
 
     /* IMMAGINI */
     .item {
@@ -220,7 +258,7 @@
 
     .arrow.left {
       content: "";
-  position: absolute;
+      position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%) rotate(-135deg);
@@ -290,5 +328,6 @@
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
