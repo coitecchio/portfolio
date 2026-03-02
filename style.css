@@ -235,6 +235,73 @@ section {
         .card:nth-child(even) {
             background-color: #2ecc71;
         }
+/* saaaaaaaaaaaaa*/
+/* Contenitore principale che posiziona le frecce sopra la sezione */
+        .carousel-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 50px auto;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Il wrapper che scorre */
+        .scroll-section {
+            display: flex;
+            overflow-x: auto;
+            scroll-behavior: smooth; /* Scorrimento morbido al click */
+            gap: 15px;
+            padding: 10px;
+            width: 100%;
+            height: 300px; /* Altezza fissa del wrapper */
+            
+            /* Nasconde la barra di scorrimento */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
+        }
+
+        .scroll-section::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+
+        /* Le Card */
+        .card {
+            flex: 0 0 250px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /* Le card ereditano l'altezza del wrapper grazie al flex default stretch */
+        }
+
+        /* Frecce */
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .prev { left: -20px; }
+        .next { right: -20px; }
+
+        .nav-btn:hover { background: #fff; scale: 1.1; }
+
+
+
+
 
     /* IMMAGINI */
     .item {
@@ -335,6 +402,7 @@ section {
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
 
