@@ -254,31 +254,6 @@ section {
     }
 
 
-/* IMMAGINE ABOUT CHE CAMBIA */
-.image-container {
-    position: relative;
-    width: 15%;
-    height: 15%;
-  }
- .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transition: opacity 0.5s ease; /* Regola la velocità della sfumatura */
-    object-fit: cover;
-  }
-  /* L'immagine sopra parte invisibile */
-  .img-top {
-    opacity: 0;
-  }
-  /* Quando passi il mouse, l'immagine sopra diventa visibile */
-  .image-container:hover .img-top {
-    opacity: 1;
-  }
-
-
     /* FRECCE  che non funzionano ehehehhe*/
     .arrow {
       width: 40px;
@@ -321,13 +296,33 @@ section {
       max-width: 1000px;     /* larghezza massima contenitore */
     }
 
-    .about img {
+   /* .about img {
       width: 400px; 
       height: 600px;
       border-radius: 0px;   /* angoli arrotondati (opzionale) */
-    }
+    }*/
 
-    .about-text {
+   .about-image-container {
+     position: relative;
+     width: 15%;
+     height: 15%;
+       }
+   .about-image-container img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     transition: opacity 0.5s ease; /* Regola la velocità della sfumatura */
+     object-fit: cover;
+   }
+   .img-top {
+     opacity: 0;
+   }
+   .image-container:hover .img-top {
+     opacity: 1;
+    }
+   .about-text {
       font-size: 18px;
       line-height: 1.6;
       font-family: Helvetica, sans-serif;
@@ -359,6 +354,7 @@ section {
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
 
