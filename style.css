@@ -258,7 +258,7 @@ section {
 .image-container {
     position: relative;
     width: 15%;
-    height: auto;
+    height: 15%;
   }
  .image-container img {
     position: absolute;
@@ -359,6 +359,7 @@ section {
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
 
