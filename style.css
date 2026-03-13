@@ -302,18 +302,11 @@ section {
       border-radius: 0px;   /* angoli arrotondati (opzionale) */
     }*/
 
-   .img-text-section {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
 .img-swap-wrapper {
   position: relative;
   flex-shrink: 0;
-  width: 280px;       /* adatta alla tua esigenza */
-  height: 200px;
-  border-radius: 10px;
+  width: 200px;       /* adatta alla tua esigenza */
+  height: 400px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -370,6 +363,7 @@ section {
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
 
