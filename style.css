@@ -308,6 +308,7 @@ section {
      height: 400px;
        }
    .about-image-container img {
+      position: relative;
      top: 0;
      left: 0;
      width: 100%;
@@ -353,6 +354,7 @@ section {
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
 
