@@ -302,28 +302,42 @@ section {
       border-radius: 0px;   /* angoli arrotondati (opzionale) */
     }*/
 
-   .image-container {
-     position: relative;
-     flex: 0 0 200px;
-     height: 400px;
-       }
-   .image-container img {
-     position: absolute;
-     top:0;
-     left:0;
-     width: 100%;
-     height: 100%;
-     transition: opacity 0.5s ease; /* Regola la velocità della sfumatura */
-     object-fit: cover;
-   }
+   .img-text-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
-   .img-top {
-     opacity: 0; /* Si stacca dal suolo e vola sopra la prima */
-     z-index: 2;
-   }
-   .about-image-container:hover .img-top {
-     opacity: 1;
-    }
+.img-swap-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 280px;       /* adatta alla tua esigenza */
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-swap-wrapper img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.img-swap-wrapper .img-default { opacity: 1; }
+.img-swap-wrapper .img-hover   { opacity: 0; }
+
+.img-swap-wrapper:hover .img-default { opacity: 0; }
+.img-swap-wrapper:hover .img-hover   { opacity: 1; }
+
+/* responsive opzionale */
+@media (max-width: 540px) {
+  .img-text-section { flex-direction: column; }
+  .img-swap-wrapper { width: 100%; }
+}
    .about-text {
       flex:1;
       font-size: 18px;
@@ -356,6 +370,7 @@ section {
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
 
