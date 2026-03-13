@@ -319,7 +319,7 @@ section {
    .img-top {
      opacity: 0;
    }
-   .image-container:hover .img-top {
+   .about-image-container:hover .img-top {
      opacity: 1;
     }
    .about-text {
@@ -354,6 +354,7 @@ section {
     .footer-menu a:hover {
       text-decoration: underline;
     }
+
 
 
 
