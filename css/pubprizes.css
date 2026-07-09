@@ -1,0 +1,74 @@
+.published {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: -1rem;
+  max-width: 90%;
+}
+
+.published-box {
+  display: flex;
+  flex-wrap: wrap;         /* LA MAGIA: fa andare a capo le card se non c'è spazio */
+  gap: 2rem;    
+  margin-top: 2rem;  
+}
+
+.book-card {
+  position: relative; 
+  width: 25%;       /* Puoi cambiarla o usare flexbox/grid per gestirla */
+  max-width: 300px;  /* Limite massimo per le card */
+  overflow: hidden;   /* Se in futuro metti un border-radius, questo evita che l'overlay esca dagli angoli */
+  cursor: pointer;
+}
+
+.book-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease; /* Opzionale: serve se vuoi zoomare la foto su hover */
+}
+
+.book-overlay {
+  position: absolute;
+  inset: 0; /* È la scorciatoia comodissima per top: 0; bottom: 0; left: 0; right: 0; */
+  background: rgba(0, 0, 0, 0.7); /* Nero trasparente al 70% (cambia 0.7 per farlo più o meno scuro) */
+  
+  /* Flexbox per centrare il testo perfettamente al centro della foto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  opacity: 0; /* Lo nascondiamo */
+  transition: opacity 0.3s ease; /* Transizione morbida */
+}
+
+.book-text {
+  color: var(--bianco); 
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 1rem;
+  
+  opacity: 0; 
+}
+
+.book-card:hover .book-overlay {
+  opacity: 1;
+}
+
+.book-card:hover .book-text {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .published-box{
+    flex-direction: column; 
+    align-items: center;    
+    gap: 2rem;        
+  }
+
+  .book-card {
+    width: 90%;            /* Su mobile la card si allarga a tutto lo schermo... */
+    max-width: 350px;       /* ...ma le diamo un limite per non farla diventare enorme */
+  }
+}

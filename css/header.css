@@ -1,0 +1,109 @@
+/* HEADER ORIZZONTALE */
+.topbar {
+      display: flex;
+      align-items: center;
+      padding: 0rem 2rem;
+      position: relative;
+      background-color: var(--bianco);
+      border-bottom: 2px solid var(--nero); /* linea orizzontale sotto header */
+}
+
+/* BLOCCO TITOLO */
+.title-block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+.title-block h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.title-block .subtitle {
+    margin: 0;
+    font-size: 1.5rem;
+    /*font-weight: normal;*/
+    color: var(--arancione);
+}
+
+/* LINEA DIVISORIA VERTICALE */
+.divider {
+    width: 2px;
+    background: var(--nero);
+    align-self: stretch;
+    margin: 0 2rem;
+}
+
+/* MENU */
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: var(--nero);
+    font-weight: bold;
+    transition: color 0.2s;
+}
+.menu ul li a:hover {
+    color: var(--arancione);
+}
+/* Link attivo */
+.menu ul li a.active {
+    color: var(--nero);
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none; 
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--nero);
+    margin-left: auto; /* Lo spinge tutto a destra se serve */
+}
+
+
+/* MEDIA QUERY PER MOBILE */
+@media (max-width: 768px) {
+    .topbar {
+        justify-content: space-between; /* Spinge titolo a sx e hamburger a dx */
+        padding: 1rem; /* Margini un po' più piccoli su mobile */
+        z-index: 999;
+    }
+
+    /* 1. Nascondiamo la GIF e la linea verticale */
+    .item, .divider {
+        display: none; 
+    }
+
+    /* 2. Mostriamo il bottone del menu */
+    .hamburger {
+        display: block; 
+    }
+
+    /* 3. Trasformiamo la lista in un menu a tendina verticale */
+    .menu ul {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Si posiziona esattamente sotto il bordo inferiore dell'header */
+        left: 0;
+        width: 100%;
+        background-color: var(--bianco); 
+        border-bottom: 2px solid var(--nero);
+        padding: 1rem 0;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    /* Questa classe verrà aggiunta tramite JavaScript quando si clicca */
+    .menu ul.open {
+        display: flex;
+    }
+}

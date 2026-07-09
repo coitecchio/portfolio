@@ -7,3 +7,5 @@ function scrollSection(button, direction) {
         behavior: "smooth"
       });
     }
+
+
