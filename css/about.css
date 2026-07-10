@@ -45,7 +45,11 @@
 
 /* responsive opzionale */
 @media (max-width: 768px) {
-  .about { flex-direction: column; }
+  .about { 
+    flex-direction: column; 
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
   .img-swap-wrapper { 
     width: 90%; 
     max-width: 250px;
