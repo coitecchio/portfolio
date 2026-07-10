@@ -1,7 +1,7 @@
 .published {
   margin-left: 4rem;
   margin-right: 4rem;
-  margin-top: -1rem;
+  margin-top: 1rem;
   max-width: 90%;
 }
 
@@ -64,7 +64,6 @@
   .published {
     margin-left: 1rem;
     margin-right: 1rem;
-    margin-top: -1rem;
     max-width: 90%;
   }
   .published-box{

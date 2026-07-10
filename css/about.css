@@ -2,8 +2,9 @@
   display: flex;
   align-items: flex-start;   /* centra verticalmente immagine e testo */
   gap: 4rem;             /* spazio tra immagine e testo */
-  margin: 2rem 4rem;
+  margin: 1rem 4rem;
   max-width: 90%;     /* larghezza massima contenitore */
+  border-bottom: 0px;
 }
 .about-text {
   flex-grow: 1;     
@@ -38,11 +39,16 @@
 .img-swap-wrapper:hover .img-hover   { opacity: 1; }
 
 .education {
+  background-color: var(--viola);
+}
+.education-text {
   margin-left: 4rem;
   margin-right: 4rem;
-  margin-top: -1rem;
 }
-
+.education-year{
+  color: var(--bianco);
+  font-weight: bold;
+}
 /* responsive opzionale */
 @media (max-width: 768px) {
   .about { 
@@ -52,6 +58,11 @@
   }
   .img-swap-wrapper { 
     width: 90%; 
-    max-width: 250px;
+    max-width: 300px;
+  }
+
+  .education-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }

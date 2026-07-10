@@ -23,8 +23,23 @@
 .title-block .subtitle {
     margin: 0;
     font-size: 1.5rem;
-    /*font-weight: normal;*/
+}
+/* lettere tutte diverse di colore, span*/
+.title-block .subtitle span {
+    display: inline-block;
+    transition: transform 0.2s ease; /* Bonus: li prepariamo per un effettino! */
+}
+.title-block .subtitle span:nth-child(4n + 1) {
     color: var(--arancione);
+}
+.title-block .subtitle span:nth-child(4n + 2) {
+    color: var(--ciano);
+}
+.title-block .subtitle span:nth-child(4n + 3) {
+    color: var(--verde);
+}
+.title-block .subtitle span:nth-child(4n + 4) {
+    color: var(--viola);
 }
 
 /* LINEA DIVISORIA VERTICALE */
@@ -49,9 +64,20 @@
     font-weight: bold;
     transition: color 0.2s;
 }
-.menu ul li a:hover {
+/* hover diversi per pagina: */
+.menu ul li a[href="index.html"]:hover {
+    color: var(--ciano);
+}
+.menu ul li a[href="about.html"]:hover {
     color: var(--arancione);
 }
+.menu ul li a[href="published.html"]:hover {
+    color: var(--verde);
+}
+.menu ul li a[href="contacts.html"]:hover {
+    color: var(--viola);
+}
+
 /* Link attivo */
 .menu ul li a.active {
     color: var(--nero);
