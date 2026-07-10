@@ -61,6 +61,7 @@
         flex:none;
         width: 100%;
         padding: 2rem 1rem;
+        min-height: calc(100vh - 30rem);
     }
 
     .contact-gif {
