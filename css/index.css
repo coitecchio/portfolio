@@ -1,0 +1,68 @@
+/* HORIZONTAL SCROLL CONTAINER */
+.horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 0rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+/* IMMAGINI */
+.item {
+    flex: 0 0 auto;
+    height: 50vh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+.item img {
+    width: auto;
+    height: 100%;
+    display: block;
+}
+
+
+/* FRECCE  che non funzionano ehehehhe*/
+.arrow {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;     
+    color: var(--nero);
+    border: 0.15rem solid var(--nero);
+    border-radius: 50%; /* La magia che li trasforma in cerchi perfetti! */
+    font-size: 1rem;
+    cursor: pointer;  
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.arrow.left {
+    left: 1rem;
+}
+
+.arrow.right {
+    right: 1rem;
+}
+
+.arrow:hover {
+    background-color: var(--arancione);
+    color: var(--bianco);
+    border-color: var(--arancione);
+}
