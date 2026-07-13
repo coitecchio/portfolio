@@ -1,68 +1,64 @@
-/* HORIZONTAL SCROLL CONTAINER */
-.horizontal-scroll {
+.portfolio-grid {
     display: flex;
-    overflow-x: auto;
-    gap: 0rem;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
+    flex-wrap: wrap; 
+    justify-content: space-between; /* Centra le righe. Puoi provare anche 'space-evenly' o 'space-between' */
+    gap: 2rem;           /*    Il gap automatico ed equidistante tra le immagini */
+    
+    /*width: 90%; */             
+    margin-bottom: 3rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
 }
 
-.horizontal-scroll::-webkit-scrollbar {
-    height: 8px;
-}
-.horizontal-scroll::-webkit-scrollbar-thumb {
-    background: #555;
-    border-radius: 4px;
-}
-
-/* IMMAGINI */
 .item {
-    flex: 0 0 auto;
-    height: 50vh;
-    overflow: hidden;
-    scroll-snap-align: start;
-    position: relative;
+    flex: 0 0 auto;         
+    width: 20vw;   
+    position: relative;         
 }
 
 .item img {
-    width: auto;
-    height: 100%;
+    width: 100%;
+    height: auto;
     display: block;
 }
 
-
-/* FRECCE  che non funzionano ehehehhe*/
-.arrow {
-    width: 2rem;
-    height: 2rem;
-    background-color: transparent;     
-    color: var(--nero);
-    border: 0.15rem solid var(--nero);
-    border-radius: 50%; /* La magia che li trasforma in cerchi perfetti! */
-    font-size: 1rem;
-    cursor: pointer;  
-    display: inline-flex; 
+.item.item-hover .item-overlay {
+    position: absolute;
+    inset: 0; /* Si espande su tutto l'item */
+    background: color-mix(in srgb, var(--ciano) 70%, transparent);
+    display: flex;
     justify-content: center;
     align-items: center;
-    
-    position: absolute;
-    top: 50%; 
-    transform: translateY(-50%); 
-    z-index: 10;
-    transition: all 0.3s ease;
+    opacity: 0; /* Nascosto all'inizio */
+    transition: opacity 0.3s ease;
+    z-index: 2; /* Sta sopra l'immagine */
 }
 
-.arrow.left {
-    left: 1rem;
+.item.item-hover.verde .item-overlay{
+    background: color-mix(in srgb, var(--verde) 70%, transparent);
+}
+.item.item-hover.viola .item-overlay{
+    background: color-mix(in srgb, var(--viola) 70%, transparent);
+}
+.item.item-hover.arancione .item-overlay{
+    background: color-mix(in srgb, var(--arancione) 70%, transparent);
 }
 
-.arrow.right {
-    right: 1rem;
+/* Il testo dentro l'overlay */
+.item.item-hover .item-text {
+    color: var(--bianco, white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    transform: translateY(20px); /* Parte leggermente spostato verso il basso */
+    transition: transform 0.3s ease;
 }
 
-.arrow:hover {
-    background-color: var(--arancione);
-    color: var(--bianco);
-    border-color: var(--arancione);
+.item.item-hover:hover .item-overlay {
+    opacity: 1; /* Mostra lo sfondo scuro */
+}
+.item.item-hover:hover .item-text {
+    transform: translateY(0); /* Fa salire il testo al centro con un effetto pop-up */
 }

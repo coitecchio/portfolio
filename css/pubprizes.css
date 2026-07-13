@@ -60,6 +60,12 @@
   opacity: 1;
 }
 
+.book-link {
+    display: contents; /* MAGIA: Dice al browser di ignorare il tag <a> per il layout */
+    text-decoration: none; /* Evita che il testo dentro la card diventi sottolineato blu */
+    color: inherit; /* Mantiene il colore originale del testo */
+}
+
 @media (max-width: 768px) {
   .published {
     margin-left: 1rem;

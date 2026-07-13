@@ -12,6 +12,7 @@
 .title-block {
     display: flex;
     flex-direction: column;
+    margin-left: 2rem;
     margin-right: 2rem;
 }
 
@@ -48,6 +49,19 @@
     background: var(--nero);
     align-self: stretch;
     margin: 0 2rem;
+}
+
+.item-gif {
+    flex: 0 0 auto;
+    height: 30vh;
+    overflow: hidden;
+    scroll-snap-align: start;
+    position: relative;
+}
+.item-gif img {
+    width: auto;
+    height: 100%;
+    display: block;
 }
 
 /* MENU */
