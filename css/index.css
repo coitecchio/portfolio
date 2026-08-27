@@ -1,19 +1,22 @@
 .portfolio-grid {
-    display: flex;
+    /*display: flex;
     flex-wrap: wrap; 
     justify-content: space-between; /* Centra le righe. Puoi provare anche 'space-evenly' o 'space-between' */
+    column-count: 4; 
     gap: 2rem;           /*    Il gap automatico ed equidistante tra le immagini */
     
-    /*width: 90%; */             
-    margin-bottom: 3rem;
     margin-right: 2rem;
     margin-left: 2rem;
 }
 
 .item {
-    flex: 0 0 auto;         
+    /*flex: 0 0 auto;         
     width: 20vw;   
-    position: relative;         
+    position: relative;   */
+    break-inside: avoid;   
+    margin-bottom: 2rem;     /* Spazio verticale sotto ogni foto */
+    position: relative;
+    overflow: hidden;      
 }
 
 .item img {
@@ -61,4 +64,15 @@
 }
 .item.item-hover:hover .item-text {
     transform: translateY(0); /* Fa salire il testo al centro con un effetto pop-up */
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        column-count: 2;  
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .portfolio-grid .item {
+        margin-bottom: 1.5rem;
+    }
 }
