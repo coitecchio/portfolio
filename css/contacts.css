@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .contact-section {
     display: flex;
     align-items: center;          
@@ -70,4 +71,78 @@
         width: 80%;
         padding: 2rem 2rem;
     }
+=======
+.contact-section {
+    display: flex;
+    align-items: center;          
+    padding: 0;                  
+    background-color: var(--bianco);
+}
+
+.contact-text{
+    background-color: var(--bianco);
+    padding: 2rem 5rem;
+    flex: 0 0 70%;
+    /*min-height: calc(100vh - 16rem);*/
+
+}
+
+.contact-text h2 {
+    color: var(--verde);
+}
+
+.contact-gif{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0rem 1rem;
+}
+
+.contact-gif img {
+    width: 80%;
+    display: block;
+}
+
+.contact-list {
+    list-style: none;     
+    padding: 0;
+    margin: 1rem 0 0 0; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;       
+}
+
+.contact-list a {
+    display: flex;
+    align-items: center;  /* Allinea verticalmente al centro icona e testo */
+    gap: 1rem;            /* Spazio orizzontale tra l'icona e il testo */
+    
+    color: var(--nero);   /* Colore del testo sul pannello verde */
+    text-decoration: none;/* Toglie la sottolineatura dei link */
+    font-weight: bold;
+    transition: color 0.3s; /* Transizione morbida per il cambio colore */
+}
+.contact-list a:hover {
+    color: var(--ciano); 
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-text {
+        flex:none;
+        width: 100%;
+        margin-left: 2rem;
+        padding: 2rem 1rem;
+        min-height: calc(100vh - 40rem);
+    }
+
+    .contact-gif {
+        flex:none;
+        width: 80%;
+        padding: 2rem 2rem;
+    }
+>>>>>>> 33ff019f03076caf397627fb7e224d4a0bdbc9f9
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .about {
   display: flex;
   align-items: flex-start;   /* centra verticalmente immagine e testo */
@@ -66,4 +67,74 @@
     margin-left: 1rem;
     margin-right: 1rem;
   }
+=======
+.about {
+  display: flex;
+  align-items: flex-start;   /* centra verticalmente immagine e testo */
+  gap: 4rem;             /* spazio tra immagine e testo */
+  margin: 1rem 4rem;
+  max-width: 90%;     /* larghezza massima contenitore */
+  border-bottom: 0px;
+}
+.about-text {
+  flex-grow: 1;     
+  /*font-size: 18px;
+  line-height: 1.6;
+  font-family: Helvetica, sans-serif;*/
+}
+
+
+.img-swap-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  width: 300px;       /* adatta alla tua esigenza */
+  height: 450px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-swap-wrapper img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.img-swap-wrapper .img-default { opacity: 1; }
+.img-swap-wrapper .img-hover   { opacity: 0; }
+
+.img-swap-wrapper:hover .img-default { opacity: 0; }
+.img-swap-wrapper:hover .img-hover   { opacity: 1; }
+
+.education {
+  background-color: var(--viola);
+  border-bottom: 0px;
+}
+.education-text {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+.education-year{
+  color: var(--bianco);
+  font-weight: bold;
+}
+/* responsive opzionale */
+@media (max-width: 768px) {
+  .about { 
+    flex-direction: column; 
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  .img-swap-wrapper { 
+    width: 90%; 
+    max-width: 300px;
+  }
+
+  .education-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+>>>>>>> 33ff019f03076caf397627fb7e224d4a0bdbc9f9
 }

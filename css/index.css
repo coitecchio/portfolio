@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .portfolio-grid {
     /*display: flex;
     flex-wrap: wrap; 
@@ -75,4 +76,83 @@
     .portfolio-grid .item {
         margin-bottom: 1.5rem;
     }
+=======
+.portfolio-grid {
+    /*display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; /* Centra le righe. Puoi provare anche 'space-evenly' o 'space-between' */
+    column-count: 4; 
+    gap: 2rem;           /*    Il gap automatico ed equidistante tra le immagini */
+    
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+.item {
+    /*flex: 0 0 auto;         
+    width: 20vw;   
+    position: relative;   */
+    break-inside: avoid;   
+    margin-bottom: 2rem;     /* Spazio verticale sotto ogni foto */
+    position: relative;
+    overflow: hidden;      
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.item.item-hover .item-overlay {
+    position: absolute;
+    inset: 0; /* Si espande su tutto l'item */
+    background: color-mix(in srgb, var(--ciano) 70%, transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Nascosto all'inizio */
+    transition: opacity 0.3s ease;
+    z-index: 2; /* Sta sopra l'immagine */
+}
+
+.item.item-hover.verde .item-overlay{
+    background: color-mix(in srgb, var(--verde) 70%, transparent);
+}
+.item.item-hover.viola .item-overlay{
+    background: color-mix(in srgb, var(--viola) 70%, transparent);
+}
+.item.item-hover.arancione .item-overlay{
+    background: color-mix(in srgb, var(--arancione) 70%, transparent);
+}
+
+/* Il testo dentro l'overlay */
+.item.item-hover .item-text {
+    color: var(--bianco, white);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    transform: translateY(20px); /* Parte leggermente spostato verso il basso */
+    transition: transform 0.3s ease;
+}
+
+.item.item-hover:hover .item-overlay {
+    opacity: 1; /* Mostra lo sfondo scuro */
+}
+.item.item-hover:hover .item-text {
+    transform: translateY(0); /* Fa salire il testo al centro con un effetto pop-up */
+}
+
+@media (max-width: 768px) {
+    .portfolio-grid {
+        column-count: 2;  
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .portfolio-grid .item {
+        margin-bottom: 1.5rem;
+    }
+>>>>>>> 33ff019f03076caf397627fb7e224d4a0bdbc9f9
 }
